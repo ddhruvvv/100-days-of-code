@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int num, w1, reversed = 0, digit;
+    printf("ENTER A NUMBER");
+    scanf("%d", &num);
+    w1 = num;
+    while (num > 0)
+    {
+        digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = num / 10;
+    }
+    if (w1 == reversed)
+    {
+        printf("THE NUMBER IS PALINDROME\n");
+    }
+    else
+    {
+        printf("NOT A PALINDROME\n");
+    }
+    return 0;
+}
