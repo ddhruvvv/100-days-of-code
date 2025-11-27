@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    enum Role {ADMIN, USER, GUEST};
+    char input[10];
+    scanf("%s", input);
+
+    enum Role r;
+    if(strcmp(input, "ADMIN") == 0) r = ADMIN;
+    else if(strcmp(input, "USER") == 0) r = USER;
+    else if(strcmp(input, "GUEST") == 0) r = GUEST;
+    else {
+        printf("Invalid role\n");
+        return 1;
+    }
+
+    switch(r) {
+        case ADMIN: printf("Welcome Admin!\n"); break;
+        case USER: printf("Welcome User!\n"); break;
+        case GUEST: printf("Welcome Guest!\n"); break;
+    }
+
+    return 0;
+}
